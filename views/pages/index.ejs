@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 <style>
 * {
   box-sizing: border-box;
@@ -18,7 +16,7 @@ body {
 
 /* Style the header */
 header {
-  background-color: #ff0000d8;
+  background-color:  #ff0000d8;
   padding: 5px;
   text-align: left;
   font-size: 18px;
@@ -35,9 +33,7 @@ p.ex2 {
 h5.ex1{
   color: #cc7a00;
 }
-h3.ex1{
-  text-align: center;
-}
+
 
 /* Container for flexboxes */
 section {
@@ -54,7 +50,6 @@ nav {
   -ms-flex: 1;
   flex: 1;
   background: #ffcc33;
-  padding: 20px;
 }
 
 /* Style the list inside the menu */
@@ -62,6 +57,26 @@ nav ul {
   list-style-type: none;
   padding: 0;
 }
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li a.active {
+  background-color: #FFE385;
+  color: #CA9D05;
+}
+
+li a:hover:not(.active) {
+  background-color: #FFE385;
+  color: #CA9D05;
+}
+
 
 /* Style the content */
 article {
@@ -74,7 +89,7 @@ article {
 
 /* Style the footer */
 footer {
-  background-color: #ff0000;
+  background-color: #ff0000d8;
   padding: 5px;
   text-align: right;
   color: white;
@@ -101,87 +116,47 @@ footer {
 
 <section>
   <nav>
-  <form> 
-    
-  
-    <div class="media-body">
-      <div class="form-group">
-      <h3>Log in</h3>
-      <Font face="FreesiaUPC"Font size=5 size="18" color="black" >
-      <label for="UserName">&#9993 UserName:</label>
-      <input type="UserName" class="form-control" id="UserName" placeholder="Enter UserName" name="UserName" required>
-    </div>
-    <div class="form-group">
-      <label for="pwd">&#128477 Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-      </label>
-    </div>
-    <Font face="FreesiaUPC"Font size=4 color="white" >
-    <input type="button" onclick="window.location.href='U2.html'" Font size=5 value="Login" class ="btn btn-primary">
-    </div>
-    </Font>
-  </form>
+    <ul>
+    </ul>
   </nav>
   <article>
     <h6>&nbsp</h6>
-    <h3 class="ex1">&#128466 การยื่นคำร้องลงทะเบียนล่าช้า &#128395</h3>
+    <h3>&#128467 กำหนดระยะเวลาการยื่นคำร้อง &#128395</h3>
     <h6>&nbsp</h6>
+    <Font face="FreesiaUPC"Font size=4 color="black" >
     <div class="media border p-2">
-    <img src="picture/avatar2.png" alt="Student" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-    <div class="media-body">
-      <h5 class="ex1">นักศึกษา</h5>
-      <p class="ex2">ใครบ้างที่สามารถยื่นคำร้องลงทะเบียนล่าช้าได้</p>
-      <div class="media p-3">
-        <img src="picture/avatar1.png" alt="Staff" class="mr-3 mt-3 rounded-circle" style="width:45px;">
-        <div class="media-body">
-          <h5 class="ex1">เจ้าหน้าที่ </h5>
-          <p class="ex2">ผู้ที่สามารถยื่นคำร้องลงทะเบียนล่าช้าได้ต้องนักศึกษาของมหาวิทยาลัยธรรมศาสตร์ที่ไม่ได้จดทะเบียนเรียนในรอบแรก</p>
-        </div>
-      </div>  
-    </div>
-  </div>
+      <form action="/action_page.php">
+    	<label for="start">วันเปิดระบบ:</label>
+        <input type="date" id="start" name="start">
 
-  <div class="media border p-2">
-    <img src="picture/avatar2.png" alt="Student" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-    <div class="media-body">
-      <h5 class="ex1">นักศึกษา</h5>
-      <p class="ex2">ในการยื่นคำร้องลงทะเบียนล่าช้ามีระยะเวลาที่สามารถยื่นคำร้องได้กี่วัน</p>
-      <div class="media p-3">
-        <img src="picture/avatar1.png" alt="Staff" class="mr-3 mt-3 rounded-circle" style="width:45px;">
-        <div class="media-body">
-          <h5 class="ex1">เจ้าหน้าที่ </h5>
-          <p class="ex2">นักศึกษาสามารถยื่นคำร้องและดำเนินการตามขั้นตอนต่างๆต้องไม่เกิน 30 วัน นับจากวันเปิดภาคเรียน</p>
-        </div>
-      </div>  
+        <a href="https://serene-shore-32376.herokuapp.com/">
+        <input type="button" Font size=5 value="submit"class ="btn btn-primary">
+        </a>
+        <!--input type="button" onclick="window.location.href='Login_page.ejs'" value="submit"-->
+    	
+    </Font>
+      </form>
     </div>
-  </div>
-
-  <div class="media border p-2">
-    <img src="picture/avatar2.png" alt="Student" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-    <div class="media-body">
-      <h5 class="ex1">นักศึกษา</h5>
-      <p class="ex2">มีค่าใช้จ่ายในการจดทะเบียนล่าช้าหรือไม่</p>
-      <div class="media p-3">
-        <img src="picture/avatar1.png" alt="Staff" class="mr-3 mt-3 rounded-circle" style="width:45px;">
-        <div class="media-body">
-          <h5 class="ex1">เจ้าหน้าที่ </h5>
-          <p class="ex2">นักศึกษาต้องเสียค่าปรับอัตราต่อวัน วันละ 45 บาท โดยเริ่มคิดค่าปรับตั้งแต่วันแรกของช่วงการจดทะเบียนเรียนล่าช้า (ไม่คิดค่าปรับวันหยุด) </p>
-        </div>
-      </div>  
-    </div>
-  </div>
-
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
+    <h1> </h1><br>
   </article>
 </section>
 
 <footer>
-    <Font face="FreesiaUPC"Font size=4 color="white" >
+    <Font face="FreesiaUPC"Font size=3 color="white" >
   <p><B>พบปัญหาการเข้าใช้หน้าเว็ป ติดต่อได้ที่: &#9743 089-999-9999 &#9993 cs264group3@dome.tu.ac.th</B></p>
-        </Font>
+  </Font>
 </footer>
 
 </body>
