@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <IMG ALIGN=left BORDER=2 HEIGHT=90 WIDTH=415 HSPACE=20 VSPACE=10 SRC="../Tulogo.png">
+  <IMG ALIGN=left BORDER=2 HEIGHT=90 WIDTH=415 HSPACE=20 VSPACE=10 SRC="picture/Tulogo.png">
  <style>
 * {box-sizing: border-box;}
 body {font-family: "Lato", sans-serif;}
@@ -175,7 +175,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <h1><B>หน้าหลัก</B></h1>
   <p>กลับสู่หน้าหลัก...</p>
   <U>ประวัตินักศึกษา</U><br>
-  <IMG ALIGN=left BORDER=5 HEIGHT=180 WIDTH=140 HSPACE=10 VSPACE=10 SRC="../jaemintu.jpg" ><br> ชื่อ &nbsp&nbsp&nbsp&nbsp&nbspนามสกุล<br>
+  <IMG ALIGN=left BORDER=5 HEIGHT=180 WIDTH=140 HSPACE=10 VSPACE=10 SRC="picture/jaemintu.jpg" ><br> ชื่อ &nbsp&nbsp&nbsp&nbsp&nbspนามสกุล<br>
     เลขประจำตัว<br>
     ชั้นปี&nbsp&nbsp&nbsp&nbsp&nbspคณะ&nbsp&nbsp&nbsp&nbsp&nbspสาขา<br> 
   อาจารย์ที่ปรึกษา
@@ -189,7 +189,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </Font>
 
   
-  <img id="myImg" src="../IMG_5336.JPG" alt="แบบที่1: ปัญหาทางการเงิน" style="width:100%;max-width:300px">
+  <img id="myImg" src="picture/IMG_5336.JPG" alt="แบบที่1: ปัญหาทางการเงิน" style="width:100%;max-width:300px">
   <!-- The Modal -->
   <div id="myModal" class="modal">
    <span class="close">&times;</span>
@@ -200,7 +200,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     name = "finance";
     num = 1;
   </script>
-  <img id="myImg" src="../IMG_5336.JPG" alt="แบบที่2: ปัญหาทางด้านสุขภาพ" style="width:100%;max-width:300px">
+  <img id="myImg" src="picture/IMG_5336.JPG" alt="แบบที่2: ปัญหาทางด้านสุขภาพ" style="width:100%;max-width:300px">
   <!-- The Modal -->
   <div id="myModal" class="modal">
    <span class="close">&times;</span>
@@ -211,7 +211,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     name = "health";
     num = 2;
   </script>
-  <img id="myImg" src="../IMG_5336.JPG" alt="แบบที่3: นักศึกษาที่ไปแลกเปลี่ยน" style="width:100%;max-width:300px">
+  <img id="myImg" src="picture/IMG_5336.JPG" alt="แบบที่3: นักศึกษาที่ไปแลกเปลี่ยน" style="width:100%;max-width:300px">
   <!-- The Modal -->
   <div id="myModal" class="modal">
    <span class="close">&times;</span>
@@ -222,7 +222,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     name = "exchange";
     num = 3;
   </script>
-  <form action="/action_page.php">
+  <form action="https://serene-shore-32376.herokuapp.com/"> <!--แก้ตรงนี้เพื่อเชื่อมไปหน้าอื่นๆ-->
     <div class="form-check">
       <label class="form-check-label" for="check1">
         <input type="checkbox" class="form-check-input" id="check1" name="option1" value="temp1" checked>ปัญหาทางการเงิน
@@ -241,9 +241,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <div class="alert alert-warning">
       <strong>คำเตือน!</strong> คุณสามารถบันทึกข้อมูลได้ไม่เกิน 3 ครั้งเท่านั้น.
     </div>
-     <a href="https://cs264-g3.herokuapp.com/" >
     <button type="submit" class="btn btn-primary">บันทึก</button>
-    </a>
     <script>
       var myObj, myJSON;
       if(name=="finance"){
@@ -263,6 +261,84 @@ body {font-family: Arial, Helvetica, sans-serif;}
       document.getElementById("demo").innerHTML = obj.name+" "+obj.num;
       //window.location.href = "ระบบลงทะเบียนล่าช้าG3.html";
     </script>
+    <!--a href="https://serene-shore-32376.herokuapp.com/">
+      <input type="submit" class="btn btn-primary" value="บันทึก">
+    </a-->
+  </form>
+</div>
+<div id="fill" class="tabcontent">
+  <Font face="FreesiaUPC"Font size=5 color="black" >
+<h1><B>กรอกเอกสารคำร้อง</B></h1>
+<p>กรุณากรอกเอกสารคำร้องในช่องว่างที่กำหนดไว้ให้ครบถ้วน พร้อมทั้งตรวจสอบรายละเอียดให้ครบก่อนกดส่งคำร้อง</p>
+<p>สามารถแก้ไขคำร้องได้ทุกเมื่อโดยกดปุ่มบันทึกใหม่ทุกครั้งที่ทำการกรอกข้อมูลใหม่ ถ้าหากกดส่งคำร้องจะไม่สามารถกลับมาแก้ไขคำร้องได้อีกครั้งหนึ่ง</p>
+  </Font>
+<form>
+
+  ชื่อ:<input type= “text” size= ”15” name= “fname” />
+  สกุล:<input  type= “text” size= ”15” name= “lname” /> 
+  เลขทะเบียน:<input type="text" size="15" name="number" />
+ชั้นปีที่:
+
+      <select name= graduate”>
+
+                              <option> 1 </option>
+
+                 <option> 2 </option>
+
+                                  <option>  3  </option>
+
+                <option> 4 </option>
+
+                                  <option> 5 </option>
+
+                                 <option> 6 </option>
+
+                                 <option> 7 </option>
+
+   </select>
+   สาขาวิชา:<input type="text" size="15" name="major" /><br>
+   <br>
+   ที่อยู่ที่ติดต่อได้เลขที่:<input type="text" size="15" name="addr" />
+   แขวง/ตำบล:<input type="text" size="15" name="addre" />
+   เขต/อำเภอ:<input type="text" size="15" name="address" />
+   จังหวัด:<input type="text" size="15" name="prov" />
+   โทรศัพท์ติดต่อนักศึกษา:<input type="text" size="15" name="tel" />
+   <br><br>
+   โทรศัพท์ติดต่อผู้ปกครอง:<input type="text" size="15" name="telpar" />
+   อาจารย์ที่ปรึกษา:<input type="text" size="15" name="teacher" />
+   <br>ประสงค์จะยื่นคำร้องเรื่อง<br>
+   <div class="form-check">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="temp1" checked><B>จดทะเบียนล่าช้า/เพิ่มล่าช้า</B> ภาคการศึกษาที่<input type="text" size="5" name="year" />
+      </label>
+      รหัสวิชา<input type="text" size="8" name="sub" />ชื่อวิชา<input type="text" size="18" name="namesub" />Section<input type="text" size="8" name="section" />
+    </div>
+   <br><div class="form-check">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="temp1" checked><B>ขอถอนวิชา/ถอนรายวิชา(Drop W)</B> ภาคการศึกษาที่<input type="text" size="5" name="year" />
+      </label>
+      รหัสวิชา<input type="text" size="8" name="sub" />ชื่อวิชา<input type="text" size="18" name="namesub" />Section<input type="text" size="8" name="section" />
+    </div>
+    <br><div class="form-check">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="temp1" checked><B>ขอจดทะเบียนศึกษารายวิชาข้ามโครงการ</B> ภาคการศึกษาที่<input type="text" size="5" name="year" />
+      </label>
+      รหัสวิชา<input type="text" size="8" name="sub" />ชื่อวิชา<input type="text" size="18" name="namesub" />Section<input type="text" size="8" name="section" />
+    </div>
+    <br><div class="form-check">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="temp1" checked><B>ขอลาออก</B> ตั้งแต่ภาค<input type="text" size="5" name="year" />ปีการศึกษา<input type="text" size="5" name="year" />
+      </label>
+      <br><B><U>คำรับรองผู้ปกครองนักศึกษา:ข้าพเจ้า(นาย/นาง)</U></B><input type="text" size="10" name="sub" />เป็นผู้ปกครองของนาย/นางสาว<input type="text" size="10" name="namesub" />ได้รับทราบการขอลาออกจากการเป็นนักศึกษามหาวิทยาลัยธรรมศาสตร์ จริง
+    <br><br><div class="form-check">
+      <label class="form-check-label" for="check1">
+        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="temp1" checked><B>อื่นๆ</B>(โปรดระบุ)<input type="text" size="100" name="year" />
+      </label>
+    </div>
+    <br>เหตุผลที่ยื่นคำร้องเนื่องจาก<input type="text" size="100" name="sub" />
+    <br><br><br>
+  <button type="button" class="btn btn-primary">บันทึก</button>
+   <button type="button" class="btn btn-primary">ส่งคำร้อง</button>
   </form>
 </div>
 <script>
